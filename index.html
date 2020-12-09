@@ -45,6 +45,8 @@
                }
                // Callback of API method: getPageInfo
                var getPageInfoCallback = function (response) {
+                      var e_time = new Date();
+                      e_time.getTime();
                       console.log('#### getPageInfoCallback start ####' + e_time);
                       if (response.result) {
                              alert(response.result);
