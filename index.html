@@ -45,6 +45,7 @@
                }
                // Callback of API method: getPageInfo
                var getPageInfoCallback = function (response) {
+                      console.log('#### getPageInfoCallback start ####');
                       if (response.result) {
                              alert(response.result);
                       } else {
@@ -53,6 +54,7 @@
                }
                // Invokes API method getPageInfo
                function getPageInfo() {
+                       console.log('#### getPageInfo start ####');
                        sforce.interaction.getPageInfo(getPageInfoCallback);
                }
 
