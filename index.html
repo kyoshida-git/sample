@@ -18,7 +18,7 @@
               function isInConsole() {
                    
                   // ######################################################################## 
-                  console.log('#### getPageInfo start ####' + e_time);                    
+                  console.log('#### isInConsole start ####');                    
                   var listener = function(payload) {
                      console.log('Clicked phone number: ' + payload.number);
                   };
@@ -27,6 +27,7 @@
                   window.addEventListener('load', function() {
                         sforce.opencti.onClickToDial({listener: listener});
                   });
+                  console.log('#### window.addEventListener end ####');         
                   // ######################################################################## 
                     
                     
