@@ -16,7 +16,21 @@
               };
               // Invokes API method: isInConsole
               function isInConsole() {
-                       sforce.interaction.isInConsole(isInConsoleCallback);
+                   
+                  // ######################################################################## 
+                  console.log('#### getPageInfo start ####' + e_time);                    
+                  var listener = function(payload) {
+                     console.log('Clicked phone number: ' + payload.number);
+                  };
+                   
+                  // Register the listener.
+                  window.addEventListener('load', function() {
+                        sforce.opencti.onClickToDial({listener: listener});
+                  });
+                  // ######################################################################## 
+                    
+                    
+                 sforce.interaction.isInConsole(isInConsoleCallback);
               }
               // Callback of API method: getCallCenterSettings
               var getCallCenterSettingsCallback = function (response) {
